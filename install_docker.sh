@@ -18,4 +18,8 @@ yum makecache fast
 #安装docker ce
 yum install -y docker-ce docker-ce-cli containerd.io
 systemctl start docker
+
+sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 docker run hello-world
